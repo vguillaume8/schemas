@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FiveDraftEmails",
+  "description": "Schema for exactly five draft email bodies.",
+  "type": "object",
+  "properties": {
+    "drafts": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "string",
+            "description": "Draft email body text."
+          }
+        },
+        "required": ["body"]
+      }
+    }
+  },
+  "required": ["drafts"]
+}

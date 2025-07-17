@@ -1,24 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "FiveDraftEmails",
-  "description": "Schema for exactly five draft email bodies.",
+  "title": "FiveFlattenedDraftEmails",
+  "description": "Schema for five separate draft email bodies.",
   "type": "object",
   "properties": {
-    "drafts": {
-      "type": "array",
-      "minItems": 5,
-      "maxItems": 5,
-      "items": {
-        "type": "object",
-        "properties": {
-          "body": {
-            "type": "string",
-            "description": "Draft email body text."
-          }
-        },
-        "required": ["body"]
-      }
-    }
+    "draft1_body": { "type": "string" },
+    "draft2_body": { "type": "string" },
+    "draft3_body": { "type": "string" },
+    "draft4_body": { "type": "string" },
+    "draft5_body": { "type": "string" }
   },
-  "required": ["drafts"]
+  "required": [
+    "draft1_body",
+    "draft2_body",
+    "draft3_body",
+    "draft4_body",
+    "draft5_body"
+  ]
 }
